@@ -4,5 +4,35 @@
 }
 
 body {
+    display: flex;
+    justify-content: center;
+}
+
+main {
     background-color: #E5E5E5;
+    display: flex;
+    justify-content: space-between;
+    height: 100vh;
+    width: 80vw;
+}
+
+#contenedor-texto-procesar {
+    padding-top: 130px;
+}
+
+#texto-procesar {
+    border: 0;
+    background-color: #E5E5E5;
+}
+
+#texto-procesar::placeholder{
+    color: darkblue;
+}
+
+#contenedor-resultado {
+    background-color: #FFFFFF;
+    height: 90%;
+    width: 300px;
+    border-radius: 32px;
+    margin: 0 5% 0 0;
 }
