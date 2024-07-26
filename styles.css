@@ -16,6 +16,10 @@ main {
     width: 80vw;
 }
 
+#contenedor-logo {
+    margin-top: 40px;
+}
+
 #contenedor-texto-procesar {
     padding-top: 130px;
 }
@@ -29,10 +33,14 @@ main {
     color: darkblue;
 }
 
+#contenedor-texto-condiciones {
+    display: flex;
+}
+
 #contenedor-resultado {
     background-color: #FFFFFF;
     height: 90%;
     width: 300px;
     border-radius: 32px;
-    margin: 0 5% 0 0;
+    margin: 40px 40px 0 0;
 }
