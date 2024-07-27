@@ -16,8 +16,18 @@ main {
     width: 80vw;
 }
 
+/* -- LOGO -- */
 #contenedor-logo {
     margin-top: 40px;
+}
+
+/* -- INGRESO -- */
+#contenedor-ingreso {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+
 }
 
 #contenedor-texto-procesar {
@@ -27,16 +37,39 @@ main {
 #texto-procesar {
     border: 0;
     background-color: #E5E5E5;
+    height: 100%;
+    resize: none;
 }
 
 #texto-procesar::placeholder{
-    color: darkblue;
+    color: #0a3871;
 }
 
-#contenedor-texto-condiciones {
+#contenedor-texto-condiciones-botones {
+    margin-bottom: 72px;
+}
+
+#contenedor-condiciones {
     display: flex;
 }
 
+.boton-accion {
+    color: #0a3871;
+    background-color: #D8DFE8;
+    border-color: #0a3871;
+    border-radius: 12px;
+    border-style: solid;
+    border-width: 1px;
+    width: 150px;
+    height: 40px;
+}
+
+.boton-accion:hover {
+    color: #FFFFFF;
+    background-color: #0a3871;
+}
+
+/* -- RESULTADO -- */
 #contenedor-resultado {
     background-color: #FFFFFF;
     height: 90%;
