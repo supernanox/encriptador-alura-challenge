@@ -43,6 +43,8 @@ main {
 
 #texto-procesar::placeholder{
     color: #0a3871;
+    font-size: 2rem;
+    font-family: "Inter", sans-serif;
 }
 
 #contenedor-texto-condiciones-botones {
@@ -51,6 +53,11 @@ main {
 
 #contenedor-condiciones {
     display: flex;
+}
+#texto-condiciones {
+    margin-left: 10px;
+    font-size: 0.8rem;
+    font-family: "Inter", sans-serif;
 }
 
 .boton-accion {
