@@ -78,9 +78,16 @@ main {
 
 /* -- RESULTADO -- */
 #contenedor-resultado {
+    display: flex;
+    flex-direction: column;
     background-color: #FFFFFF;
     height: 90%;
     width: 300px;
     border-radius: 32px;
     margin: 40px 40px 0 0;
+}
+
+#contenedor-img-resultado {
+    display: block;
+    width: 100%;
 }
