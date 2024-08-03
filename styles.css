@@ -112,5 +112,6 @@ main {
 }
 
 .resultado-desktop {
-    
+    color: var(--color-azul-oscuro);
+    font-family: var(--font-inter);
 }
