@@ -3,6 +3,11 @@
     margin: 0%;
 }
 
+:root {
+    --color-azul-oscuro: #0a3871;
+    --font-inter: "Inter", sans-serif;
+}
+
 body {
     display: flex;
     justify-content: center;
@@ -42,9 +47,9 @@ main {
 }
 
 #texto-procesar::placeholder{
-    color: #0a3871;
+    color: var(--color-azul-oscuro);
     font-size: 2rem;
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-inter);
 }
 
 #contenedor-texto-condiciones-botones {
@@ -57,13 +62,13 @@ main {
 #texto-condiciones {
     margin-left: 10px;
     font-size: 0.8rem;
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-inter);
 }
 
 .boton-accion {
-    color: #0a3871;
+    color: var(--color-azul-oscuro);
     background-color: #D8DFE8;
-    border-color: #0a3871;
+    border-color: var(--color-azul-oscuro);
     border-radius: 12px;
     border-style: solid;
     border-width: 1px;
@@ -73,13 +78,14 @@ main {
 
 .boton-accion:hover {
     color: #FFFFFF;
-    background-color: #0a3871;
+    background-color: var(--color-azul-oscuro);
 }
 
 /* -- RESULTADO -- */
 #contenedor-resultado {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     background-color: #FFFFFF;
     height: 90%;
     width: 300px;
@@ -87,7 +93,24 @@ main {
     margin: 40px 40px 0 0;
 }
 
-#contenedor-img-resultado {
+#img-resultado {
     display: block;
     width: 100%;
+}
+
+#texto-sin-resultado-grande {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-family: var(--font-inter);
+}
+
+#texto-sin-resultado-pequeño {
+    text-align: center;
+    font-size: 0.9rem;
+    font-family: var(--font-inter);
+}
+
+.resultado-desktop {
+    
 }
