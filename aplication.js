@@ -10,14 +10,13 @@ function validar(texto) {
             if (!CARACTERES_ACEPTADOS.includes(carActual)) {
                 alert("Caracter inválido: " + carActual);
                 break;
-            }else{
+            } else {
                 agregar(carActual);
             }
         }
     } else {
         alert("Debe ingresar el texto a encriptar.");
     }
-    alert(egreso);
 }
 
 function encriptar() {
@@ -25,10 +24,14 @@ function encriptar() {
     validar(ingreso);
 }
 
-function agregar(caracter){
-    if(caracter == "a"){
+function agregar(caracter) {
+    if (caracter == "a") {
         egreso = egreso + "4";
-    }else {
+    } else {
         egreso = egreso + caracter;
     }
+}
+
+function resetearEgreso(){
+    egreso = "";
 }
