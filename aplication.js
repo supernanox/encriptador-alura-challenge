@@ -17,6 +17,10 @@ function validar(texto) {
     } else {
         alert("Debe ingresar el texto a encriptar.");
     }
+
+    alert(egreso);
+    resetearEgreso();
+
 }
 
 function encriptar() {
@@ -25,11 +29,33 @@ function encriptar() {
 }
 
 function agregar(caracter) {
-    if (caracter == "a") {
+    switch(caracter){
+        case "a":
+            egreso = egreso + "ai";
+            break;
+        case "e":
+            egreso = egreso + "enter";
+            break;        
+        case "i":
+            egreso = egreso + "imes";
+            break;
+        case "o":
+            egreso = egreso + "ober";
+            break;
+        case "u":
+            egreso = egreso + "ufat";
+            break;
+        default:
+            egreso = egreso + caracter;
+            break;
+    }
+
+
+    /* if (caracter == "a") {
         egreso = egreso + "4";
     } else {
         egreso = egreso + caracter;
-    }
+    } */
 }
 
 function resetearEgreso(){
