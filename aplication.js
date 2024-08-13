@@ -18,7 +18,7 @@ function validar(texto) {
         alert("Debe ingresar el texto a encriptar.");
     }
 
-    alert(egreso);
+    mostrarResultado(egreso);
     resetearEgreso();
 
 }
@@ -49,13 +49,15 @@ function agregar(caracter) {
             egreso = egreso + caracter;
             break;
     }
+}
 
+function mostrarResultado(resultado){
+let texto = document.getElementById("texto-resultado");
+let elementosparaQuitar = document.querySelectorAll(".elementos-para-quitar");
 
-    /* if (caracter == "a") {
-        egreso = egreso + "4";
-    } else {
-        egreso = egreso + caracter;
-    } */
+texto.removeAttribute("hidden");
+texto.innerHTML = egreso;
+elementosparaQuitar.forEach(elemento => {elemento.setAttribute("hidden", "")});
 }
 
 function resetearEgreso(){

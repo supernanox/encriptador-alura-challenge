@@ -115,3 +115,12 @@ main {
     color: var(--color-azul-oscuro);
     font-family: var(--font-inter);
 }
+
+#contenedor-texto-resultado {
+    
+}
+
+#texto-resultado {
+    color: var(--color-azul-oscuro);
+    font-family: var(--font-inter);
+}
