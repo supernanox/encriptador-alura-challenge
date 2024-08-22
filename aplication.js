@@ -23,7 +23,12 @@ function validar(texto) {
 
 }
 
-function encriptar() {
+function btnEncriptar() {
+    ingreso = document.getElementById("texto-procesar").value;
+    validar(ingreso);
+}
+
+function btnDesencriptar(){
     ingreso = document.getElementById("texto-procesar").value;
     validar(ingreso);
 }
