@@ -3,7 +3,7 @@ const CARACTERES_ACEPTADOS = "abcdefghijklmnñopqrstuvwxyz0123456789.,:;¡!¿?-_
 let ingreso = "";
 let egreso = "";
 
-function validar(texto) {
+function validarParaEncriptar(texto) {
     if (texto.length > 0) {
         for (i = 0; i < texto.length; i++) {
             let carActual = texto.charAt(i);
@@ -11,7 +11,7 @@ function validar(texto) {
                 alert("Caracter inválido: " + carActual);
                 break;
             } else {
-                agregar(carActual);
+                agregarParaEncriptar(carActual);
             }
         }
     } else {
@@ -23,17 +23,52 @@ function validar(texto) {
 
 }
 
+function validarParaDesencriptar(texto) {
+    if (texto.length > 0) {
+        
+    } else {
+        alert("Debe ingresar el texto a desencriptar.");
+    }
+
+    mostrarResultado(egreso);
+    resetearEgreso();
+
+}
+
 function btnEncriptar() {
     ingreso = document.getElementById("texto-procesar").value;
-    validar(ingreso);
+    validarParaEncriptar(ingreso);
 }
 
 function btnDesencriptar(){
     ingreso = document.getElementById("texto-procesar").value;
-    validar(ingreso);
+    validarParaEncriptar(ingreso);
 }
 
-function agregar(caracter) {
+function agregarParaEncriptar(caracter) {
+    switch(caracter){
+        case "a":
+            egreso = egreso + "ai";
+            break;
+        case "e":
+            egreso = egreso + "enter";
+            break;        
+        case "i":
+            egreso = egreso + "imes";
+            break;
+        case "o":
+            egreso = egreso + "ober";
+            break;
+        case "u":
+            egreso = egreso + "ufat";
+            break;
+        default:
+            egreso = egreso + caracter;
+            break;
+    }
+}
+
+function agregarParaDesencriptar(caracter) {
     switch(caracter){
         case "a":
             egreso = egreso + "ai";
