@@ -80,7 +80,7 @@ function agregarParaEncriptar(caracter) {
 function desencriptar(textoParaDesencriptar) {
     let egresoDesencriptado = "";
     egresoDesencriptado = textoParaDesencriptar.replaceAll("ai", "a").replaceAll("enter", "e").replaceAll("imes", "i").replaceAll("ober", "o").replaceAll("ufat", "u");
-    
+      
     mostrarResultadoDesencriptado(egresoDesencriptado);
 }
 

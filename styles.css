@@ -117,7 +117,12 @@ main {
 }
 
 #contenedor-texto-resultado {
-    
+    display: flex;
+    height: 100%;
+    width: 90%;
+    margin-left: 5%;
+    margin-top: 5%;
+    justify-content: start;
 }
 
 #texto-resultado {
