@@ -1,4 +1,4 @@
-const CARACTERES_ACEPTADOS = "abcdefghijklmnñopqrstuvwxyz0123456789.,:;¡!¿?-_";
+const CARACTERES_ACEPTADOS = "abcdefghijklmnñopqrstuvwxyz0123456789.,:;¡!¿?-_ ";
 
 let ingreso = "";
 let egreso = "";
@@ -25,19 +25,20 @@ function validarParaEncriptar(texto) {
 
 function validarParaDesencriptar(texto) {
     if (texto.length > 0) {
-        for (i = 0; i < texto.length - 1; i++) {
-            if (!CARACTERES_ACEPTADOS.includes(i)) {
+        for (i = 0; i < texto.length; i++) {
+            let carActual = texto.charAt(i);
+            if (!CARACTERES_ACEPTADOS.includes(carActual)) {
                 alert("Caracter inválido: " + carActual);
                 break;
-            } else {
-
-            }            
+            }
+            console.log("Se evaluó: " + carActual)
         }
     } else {
         alert("Debe ingresar el texto a desencriptar.");
     }
-
+    console.log("Ahora ejecutará desencriptar al texto: " + texto)
     desencriptar(texto);
+    console.log("Ejecutó desencriptar")
     resetearEgreso();
 
 }
@@ -49,6 +50,7 @@ function btnEncriptar() {
 
 function btnDesencriptar() {
     ingreso = document.getElementById("texto-procesar").value;
+    console.log("En btnDesencriptar: "+ ingreso)
     validarParaDesencriptar(ingreso);
 }
 
@@ -77,10 +79,9 @@ function agregarParaEncriptar(caracter) {
 
 function desencriptar(textoParaDesencriptar) {
     let egresoDesencriptado = "";
-    if (textoParaDesencriptar.includes("ai")) {
-        egresoDesencriptado = textoParaDesencriptar.replaceAll("ai", "a");
-    }
-    mostrarResultado();
+    egresoDesencriptado = textoParaDesencriptar.replaceAll("ai", "a").replaceAll("enter", "e").replaceAll("imes", "i").replaceAll("ober", "o").replaceAll("ufat", "u");
+    
+    mostrarResultadoDesencriptado(egresoDesencriptado);
 }
 
 function mostrarResultado() {
@@ -89,6 +90,17 @@ function mostrarResultado() {
 
     texto.removeAttribute("hidden");
     texto.innerHTML = egreso;
+    console.log("En mostrarResultado puse egreso cono inner de texto: " +egreso)
+    elementosparaQuitar.forEach(elemento => { elemento.setAttribute("hidden", "") });
+}
+
+function mostrarResultadoDesencriptado(egresoDesencriptado) {
+    let texto = document.getElementById("texto-resultado");
+    let elementosparaQuitar = document.querySelectorAll(".elementos-para-quitar");
+
+    texto.removeAttribute("hidden");
+    texto.innerHTML = egresoDesencriptado;
+    console.log("En mostrarResultado puse egreso cono inner de texto: " + egresoDesencriptado)
     elementosparaQuitar.forEach(elemento => { elemento.setAttribute("hidden", "") });
 }
 
