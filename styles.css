@@ -129,3 +129,37 @@ main {
     color: var(--color-azul-oscuro);
     font-family: var(--font-inter);
 }
+
+@media (max-width: 768px) {
+    main {
+        height: auto;
+    }
+    
+    #contenedor-principal {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #contenedor-ingreso {
+        height: 70%;
+    }
+
+    #contenedor-texto-procesar {
+        padding-top: 10%;
+        margin-left: 5%;
+    }
+
+    #contenedor-texto-condiciones-botones{
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+
+    .boton-accion {
+        width: 40%;
+    }
+
+    #contenedor-botones {        
+        justify-content: space-around;
+    }
+    
+}
