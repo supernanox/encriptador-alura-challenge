@@ -49,7 +49,7 @@ main {
 
 #texto-procesar::placeholder{
     color: var(--color-azul-oscuro);
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-family: var(--font-inter);
 }
 
@@ -185,6 +185,31 @@ main {
 
     #contenedor-texto-resultado {
         margin: 2% auto 2% auto;
+    }
+
+    /*
+    MODO CECULAR
+    */
+    @media (max-width: 375px) {
+        #contenedor-texto-condiciones-botones {
+            margin-left: 0%;
+        }
+
+        #contenedor-condiciones {
+            margin-left: 4%;
+        }
+        
+        #contenedor-botones {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .boton-accion {
+            width: 90%;
+            margin: 2% auto 2% auto;
+        }
+
     }
     
 }
